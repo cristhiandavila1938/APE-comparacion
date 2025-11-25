@@ -30,10 +30,9 @@ public class CsvLoader {
                         "Dataset no manejado por esta parte del proyecto: " + filename);
         }
     }
-
-    private static int[] loadCitasOrdenadas(String path) throws Exception {
-
-        List<Integer> lista = new ArrayList<>();
+    // 1. citas_100_ordenadas
+    private static String[] loadCitasOrdenadas(String path) throws Exception {
+        List<String> lista = new ArrayList<>();
 
         BufferedReader br = new BufferedReader(
                 new InputStreamReader(new FileInputStream(path), StandardCharsets.UTF_8));
@@ -41,19 +40,14 @@ public class CsvLoader {
         String line = br.readLine(); // header
 
         while ((line = br.readLine()) != null) {
-            String[] p = line.split(";");
-
-            // Extraer ID (CITA-XXX)
-            String idStr = p[0];
-
-            // Obtener solo el número
-            int id = Integer.parseInt(idStr.substring(5));
-
-            lista.add(id);
+            lista.add(line);
         }
+
         br.close();
-        return lista.stream().mapToInt(i -> i).toArray();
+        return lista.toArray(new String[0]);
     }
+
+
 
 
     // 2.citas_100_casi_ordenadas.csv
