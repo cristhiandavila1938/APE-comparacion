@@ -1,4 +1,4 @@
-# Práctica de Ordenación Básica en Java: Burbuja, Selección e Inserción
+# Práctica de Ordenación Básica en Java haciendo comparaciones: Burbuja, Selección e Inserción
 
 ## Cómo descargar el repositorio
 Link del informe de la practica:
