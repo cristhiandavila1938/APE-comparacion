@@ -28,6 +28,45 @@ public class GeneratorDtasets {
         return String.format("2025-03-%02dT%02d:%02d", dia, hora, minuto);
     }
 
+    // 1. Generar citas_100_ordenadas
+    private static void generarCitas100() throws Exception {
+
+        String[] apellidos = {
+                "Guerrero","Naranjo","Cedeño","Ramírez","Vera","Mora","Sánchez","Bravo","Cruz",
+                "Mendoza","Suárez","Muñoz","Jiménez","Vega","Reyes","Paredes","Castillo","Alvarez",
+                "Flores","Ortega","Rivas","Rojas","Cardenas","Carrillo","Andrade","Paz","Romero",
+                "Figueroa","Torres","Silva"
+        };
+
+        Random rnd = new Random(42);
+
+        LocalDateTime inicio = LocalDateTime.of(2025,3,1,8,0);
+        LocalDateTime fin    = LocalDateTime.of(2025,3,31,18,0);
+        long minutosTot = Duration.between(inicio, fin).toMinutes();
+
+        try (PrintWriter pw = new PrintWriter(
+                new OutputStreamWriter(
+                        new FileOutputStream("data/citas_100.csv"),
+                        StandardCharsets.UTF_8))) {
+
+            pw.println("id;apellido;fechaHora");
+
+            for (int i = 1; i <= 100; i++) {
+
+                String id = String.format("CITA-%03d", i);
+                String apellido = apellidos[rnd.nextInt(apellidos.length)];
+
+                long offset = rnd.nextInt((int) minutosTot);
+                LocalDateTime fecha = inicio.plusMinutes(offset);
+
+                String fechaStr = fecha.format(DateTimeFormatter.ofPattern("yyyy-MM-dd'T'HH:mm"));
+
+                pw.println(id + ";" + apellido + ";" + fechaStr);
+            }
+        }
+    }
+
+
     // 2. Generar citas_100_casi_ordenadas.csv
     private static void generarCitasCasiOrdenadas() throws Exception {
 
