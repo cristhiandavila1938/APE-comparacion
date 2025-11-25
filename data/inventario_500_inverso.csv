@@ -1,0 +1,501 @@
+id;insumo;stock
+ITEM-0001;Gasas 10x10;500
+ITEM-0002;Gasas 10x10;499
+ITEM-0003;Toallas Antisépticas;498
+ITEM-0004;Cinta Microporo;497
+ITEM-0005;Toallas Antisépticas;496
+ITEM-0006;Cinta Microporo;495
+ITEM-0007;Toallas Antisépticas;494
+ITEM-0008;Guantes Latex Talla L;493
+ITEM-0009;Venda Elástica 5cm;492
+ITEM-0010;Termómetro Digital;491
+ITEM-0011;Guante Nitrilo Talla M;490
+ITEM-0012;Venda Elástica 5cm;489
+ITEM-0013;Desinfectante 500ml;488
+ITEM-0014;Bata Desechable;487
+ITEM-0015;Venda Elástica 5cm;486
+ITEM-0016;Alcohol 70% 1L;485
+ITEM-0017;Guantes Latex Talla L;484
+ITEM-0018;Gel Antibacterial 250ml;483
+ITEM-0019;Algodón 200g;482
+ITEM-0020;Desinfectante 500ml;481
+ITEM-0021;Guantes Latex Talla L;480
+ITEM-0022;Toallas Antisépticas;479
+ITEM-0023;Guantes Latex Talla L;478
+ITEM-0024;Jeringa 5ml;477
+ITEM-0025;Cubre Zapatos;476
+ITEM-0026;Algodón 200g;475
+ITEM-0027;Cinta Microporo;474
+ITEM-0028;Bata Desechable;473
+ITEM-0029;Bata Desechable;472
+ITEM-0030;Mascarilla KN95;471
+ITEM-0031;Esparadrapo 5m;470
+ITEM-0032;Jeringa 5ml;469
+ITEM-0033;Venda Elástica 5cm;468
+ITEM-0034;Cubre Zapatos;467
+ITEM-0035;Tubo de Ensayo;466
+ITEM-0036;Apositos Estériles;465
+ITEM-0037;Algodón 200g;464
+ITEM-0038;Tubo de Ensayo;463
+ITEM-0039;Cubre Zapatos;462
+ITEM-0040;Venda Elástica 5cm;461
+ITEM-0041;Bata Desechable;460
+ITEM-0042;Guante Nitrilo Talla M;459
+ITEM-0043;Gel Antibacterial 250ml;458
+ITEM-0044;Toallas Antisépticas;457
+ITEM-0045;Guante Nitrilo Talla M;456
+ITEM-0046;Guantes Latex Talla L;455
+ITEM-0047;Bata Desechable;454
+ITEM-0048;Esparadrapo 5m;453
+ITEM-0049;Alcohol 70% 1L;452
+ITEM-0050;Venda Elástica 5cm;451
+ITEM-0051;Cubre Zapatos;450
+ITEM-0052;Esparadrapo 5m;449
+ITEM-0053;Cinta Microporo;448
+ITEM-0054;Alcohol 70% 1L;447
+ITEM-0055;Apositos Estériles;446
+ITEM-0056;Apositos Estériles;445
+ITEM-0057;Gel Antibacterial 250ml;444
+ITEM-0058;Esparadrapo 5m;443
+ITEM-0059;Tubo de Ensayo;442
+ITEM-0060;Esparadrapo 5m;441
+ITEM-0061;Guantes Latex Talla L;440
+ITEM-0062;Alcohol 70% 1L;439
+ITEM-0063;Bata Desechable;438
+ITEM-0064;Termómetro Digital;437
+ITEM-0065;Bata Desechable;436
+ITEM-0066;Bata Desechable;435
+ITEM-0067;Desinfectante 500ml;434
+ITEM-0068;Guante Nitrilo Talla M;433
+ITEM-0069;Jeringa 5ml;432
+ITEM-0070;Bata Desechable;431
+ITEM-0071;Guante Nitrilo Talla M;430
+ITEM-0072;Apositos Estériles;429
+ITEM-0073;Venda Elástica 5cm;428
+ITEM-0074;Gasas 10x10;427
+ITEM-0075;Algodón 200g;426
+ITEM-0076;Bata Desechable;425
+ITEM-0077;Termómetro Digital;424
+ITEM-0078;Mascarilla KN95;423
+ITEM-0079;Gel Antibacterial 250ml;422
+ITEM-0080;Esparadrapo 5m;421
+ITEM-0081;Algodón 200g;420
+ITEM-0082;Toallas Antisépticas;419
+ITEM-0083;Venda Elástica 5cm;418
+ITEM-0084;Tubo de Ensayo;417
+ITEM-0085;Esparadrapo 5m;416
+ITEM-0086;Venda Elástica 5cm;415
+ITEM-0087;Termómetro Digital;414
+ITEM-0088;Toallas Antisépticas;413
+ITEM-0089;Toallas Antisépticas;412
+ITEM-0090;Suero Fisiológico 1L;411
+ITEM-0091;Guantes Latex Talla L;410
+ITEM-0092;Guante Nitrilo Talla M;409
+ITEM-0093;Cinta Microporo;408
+ITEM-0094;Termómetro Digital;407
+ITEM-0095;Venda Elástica 5cm;406
+ITEM-0096;Tijeras Médicas;405
+ITEM-0097;Termómetro Digital;404
+ITEM-0098;Desinfectante 500ml;403
+ITEM-0099;Tubo de Ensayo;402
+ITEM-0100;Gasas 10x10;401
+ITEM-0101;Desinfectante 500ml;400
+ITEM-0102;Mascarilla KN95;399
+ITEM-0103;Cubre Zapatos;398
+ITEM-0104;Tijeras Médicas;397
+ITEM-0105;Tijeras Médicas;396
+ITEM-0106;Guantes Latex Talla L;395
+ITEM-0107;Desinfectante 500ml;394
+ITEM-0108;Tubo de Ensayo;393
+ITEM-0109;Desinfectante 500ml;392
+ITEM-0110;Esparadrapo 5m;391
+ITEM-0111;Desinfectante 500ml;390
+ITEM-0112;Suero Fisiológico 1L;389
+ITEM-0113;Gel Antibacterial 250ml;388
+ITEM-0114;Venda Elástica 5cm;387
+ITEM-0115;Cinta Microporo;386
+ITEM-0116;Cinta Microporo;385
+ITEM-0117;Gasas 10x10;384
+ITEM-0118;Venda Elástica 5cm;383
+ITEM-0119;Bata Desechable;382
+ITEM-0120;Gasas 10x10;381
+ITEM-0121;Cinta Microporo;380
+ITEM-0122;Cinta Microporo;379
+ITEM-0123;Gel Antibacterial 250ml;378
+ITEM-0124;Cinta Microporo;377
+ITEM-0125;Cinta Microporo;376
+ITEM-0126;Suero Fisiológico 1L;375
+ITEM-0127;Jeringa 5ml;374
+ITEM-0128;Gasas 10x10;373
+ITEM-0129;Algodón 200g;372
+ITEM-0130;Bata Desechable;371
+ITEM-0131;Bata Desechable;370
+ITEM-0132;Algodón 200g;369
+ITEM-0133;Alcohol 70% 1L;368
+ITEM-0134;Venda Elástica 5cm;367
+ITEM-0135;Mascarilla KN95;366
+ITEM-0136;Venda Elástica 5cm;365
+ITEM-0137;Gel Antibacterial 250ml;364
+ITEM-0138;Bata Desechable;363
+ITEM-0139;Algodón 200g;362
+ITEM-0140;Alcohol 70% 1L;361
+ITEM-0141;Guantes Latex Talla L;360
+ITEM-0142;Tubo de Ensayo;359
+ITEM-0143;Alcohol 70% 1L;358
+ITEM-0144;Tubo de Ensayo;357
+ITEM-0145;Alcohol 70% 1L;356
+ITEM-0146;Esparadrapo 5m;355
+ITEM-0147;Guante Nitrilo Talla M;354
+ITEM-0148;Tijeras Médicas;353
+ITEM-0149;Gasas 10x10;352
+ITEM-0150;Alcohol 70% 1L;351
+ITEM-0151;Mascarilla KN95;350
+ITEM-0152;Toallas Antisépticas;349
+ITEM-0153;Guante Nitrilo Talla M;348
+ITEM-0154;Guantes Latex Talla L;347
+ITEM-0155;Jeringa 5ml;346
+ITEM-0156;Guantes Latex Talla L;345
+ITEM-0157;Guantes Latex Talla L;344
+ITEM-0158;Termómetro Digital;343
+ITEM-0159;Termómetro Digital;342
+ITEM-0160;Tijeras Médicas;341
+ITEM-0161;Mascarilla KN95;340
+ITEM-0162;Apositos Estériles;339
+ITEM-0163;Alcohol 70% 1L;338
+ITEM-0164;Suero Fisiológico 1L;337
+ITEM-0165;Desinfectante 500ml;336
+ITEM-0166;Alcohol 70% 1L;335
+ITEM-0167;Cinta Microporo;334
+ITEM-0168;Toallas Antisépticas;333
+ITEM-0169;Termómetro Digital;332
+ITEM-0170;Gasas 10x10;331
+ITEM-0171;Desinfectante 500ml;330
+ITEM-0172;Termómetro Digital;329
+ITEM-0173;Guantes Latex Talla L;328
+ITEM-0174;Esparadrapo 5m;327
+ITEM-0175;Apositos Estériles;326
+ITEM-0176;Jeringa 5ml;325
+ITEM-0177;Toallas Antisépticas;324
+ITEM-0178;Jeringa 5ml;323
+ITEM-0179;Cinta Microporo;322
+ITEM-0180;Tijeras Médicas;321
+ITEM-0181;Gel Antibacterial 250ml;320
+ITEM-0182;Bata Desechable;319
+ITEM-0183;Desinfectante 500ml;318
+ITEM-0184;Gel Antibacterial 250ml;317
+ITEM-0185;Desinfectante 500ml;316
+ITEM-0186;Esparadrapo 5m;315
+ITEM-0187;Termómetro Digital;314
+ITEM-0188;Venda Elástica 5cm;313
+ITEM-0189;Bata Desechable;312
+ITEM-0190;Apositos Estériles;311
+ITEM-0191;Termómetro Digital;310
+ITEM-0192;Suero Fisiológico 1L;309
+ITEM-0193;Gel Antibacterial 250ml;308
+ITEM-0194;Suero Fisiológico 1L;307
+ITEM-0195;Termómetro Digital;306
+ITEM-0196;Cubre Zapatos;305
+ITEM-0197;Gasas 10x10;304
+ITEM-0198;Tijeras Médicas;303
+ITEM-0199;Apositos Estériles;302
+ITEM-0200;Guante Nitrilo Talla M;301
+ITEM-0201;Guantes Latex Talla L;300
+ITEM-0202;Bata Desechable;299
+ITEM-0203;Suero Fisiológico 1L;298
+ITEM-0204;Suero Fisiológico 1L;297
+ITEM-0205;Apositos Estériles;296
+ITEM-0206;Jeringa 5ml;295
+ITEM-0207;Esparadrapo 5m;294
+ITEM-0208;Tijeras Médicas;293
+ITEM-0209;Venda Elástica 5cm;292
+ITEM-0210;Venda Elástica 5cm;291
+ITEM-0211;Tubo de Ensayo;290
+ITEM-0212;Alcohol 70% 1L;289
+ITEM-0213;Tijeras Médicas;288
+ITEM-0214;Venda Elástica 5cm;287
+ITEM-0215;Bata Desechable;286
+ITEM-0216;Bata Desechable;285
+ITEM-0217;Toallas Antisépticas;284
+ITEM-0218;Bata Desechable;283
+ITEM-0219;Apositos Estériles;282
+ITEM-0220;Algodón 200g;281
+ITEM-0221;Jeringa 5ml;280
+ITEM-0222;Cubre Zapatos;279
+ITEM-0223;Gel Antibacterial 250ml;278
+ITEM-0224;Algodón 200g;277
+ITEM-0225;Desinfectante 500ml;276
+ITEM-0226;Esparadrapo 5m;275
+ITEM-0227;Algodón 200g;274
+ITEM-0228;Guantes Latex Talla L;273
+ITEM-0229;Bata Desechable;272
+ITEM-0230;Guantes Latex Talla L;271
+ITEM-0231;Desinfectante 500ml;270
+ITEM-0232;Desinfectante 500ml;269
+ITEM-0233;Tijeras Médicas;268
+ITEM-0234;Guantes Latex Talla L;267
+ITEM-0235;Suero Fisiológico 1L;266
+ITEM-0236;Alcohol 70% 1L;265
+ITEM-0237;Alcohol 70% 1L;264
+ITEM-0238;Tijeras Médicas;263
+ITEM-0239;Guantes Latex Talla L;262
+ITEM-0240;Tubo de Ensayo;261
+ITEM-0241;Bata Desechable;260
+ITEM-0242;Jeringa 5ml;259
+ITEM-0243;Alcohol 70% 1L;258
+ITEM-0244;Jeringa 5ml;257
+ITEM-0245;Bata Desechable;256
+ITEM-0246;Tubo de Ensayo;255
+ITEM-0247;Esparadrapo 5m;254
+ITEM-0248;Esparadrapo 5m;253
+ITEM-0249;Tubo de Ensayo;252
+ITEM-0250;Tijeras Médicas;251
+ITEM-0251;Gel Antibacterial 250ml;250
+ITEM-0252;Termómetro Digital;249
+ITEM-0253;Guante Nitrilo Talla M;248
+ITEM-0254;Toallas Antisépticas;247
+ITEM-0255;Mascarilla KN95;246
+ITEM-0256;Algodón 200g;245
+ITEM-0257;Jeringa 5ml;244
+ITEM-0258;Algodón 200g;243
+ITEM-0259;Esparadrapo 5m;242
+ITEM-0260;Desinfectante 500ml;241
+ITEM-0261;Apositos Estériles;240
+ITEM-0262;Guante Nitrilo Talla M;239
+ITEM-0263;Suero Fisiológico 1L;238
+ITEM-0264;Tijeras Médicas;237
+ITEM-0265;Guantes Latex Talla L;236
+ITEM-0266;Esparadrapo 5m;235
+ITEM-0267;Desinfectante 500ml;234
+ITEM-0268;Desinfectante 500ml;233
+ITEM-0269;Venda Elástica 5cm;232
+ITEM-0270;Gasas 10x10;231
+ITEM-0271;Algodón 200g;230
+ITEM-0272;Esparadrapo 5m;229
+ITEM-0273;Cinta Microporo;228
+ITEM-0274;Cubre Zapatos;227
+ITEM-0275;Guantes Latex Talla L;226
+ITEM-0276;Desinfectante 500ml;225
+ITEM-0277;Esparadrapo 5m;224
+ITEM-0278;Suero Fisiológico 1L;223
+ITEM-0279;Jeringa 5ml;222
+ITEM-0280;Guantes Latex Talla L;221
+ITEM-0281;Guante Nitrilo Talla M;220
+ITEM-0282;Gel Antibacterial 250ml;219
+ITEM-0283;Esparadrapo 5m;218
+ITEM-0284;Gasas 10x10;217
+ITEM-0285;Algodón 200g;216
+ITEM-0286;Cubre Zapatos;215
+ITEM-0287;Venda Elástica 5cm;214
+ITEM-0288;Tubo de Ensayo;213
+ITEM-0289;Alcohol 70% 1L;212
+ITEM-0290;Bata Desechable;211
+ITEM-0291;Algodón 200g;210
+ITEM-0292;Termómetro Digital;209
+ITEM-0293;Apositos Estériles;208
+ITEM-0294;Desinfectante 500ml;207
+ITEM-0295;Guante Nitrilo Talla M;206
+ITEM-0296;Termómetro Digital;205
+ITEM-0297;Bata Desechable;204
+ITEM-0298;Bata Desechable;203
+ITEM-0299;Desinfectante 500ml;202
+ITEM-0300;Cinta Microporo;201
+ITEM-0301;Jeringa 5ml;200
+ITEM-0302;Gel Antibacterial 250ml;199
+ITEM-0303;Mascarilla KN95;198
+ITEM-0304;Apositos Estériles;197
+ITEM-0305;Venda Elástica 5cm;196
+ITEM-0306;Apositos Estériles;195
+ITEM-0307;Tubo de Ensayo;194
+ITEM-0308;Bata Desechable;193
+ITEM-0309;Jeringa 5ml;192
+ITEM-0310;Guante Nitrilo Talla M;191
+ITEM-0311;Algodón 200g;190
+ITEM-0312;Jeringa 5ml;189
+ITEM-0313;Apositos Estériles;188
+ITEM-0314;Termómetro Digital;187
+ITEM-0315;Suero Fisiológico 1L;186
+ITEM-0316;Gel Antibacterial 250ml;185
+ITEM-0317;Termómetro Digital;184
+ITEM-0318;Alcohol 70% 1L;183
+ITEM-0319;Desinfectante 500ml;182
+ITEM-0320;Gasas 10x10;181
+ITEM-0321;Suero Fisiológico 1L;180
+ITEM-0322;Bata Desechable;179
+ITEM-0323;Alcohol 70% 1L;178
+ITEM-0324;Cubre Zapatos;177
+ITEM-0325;Toallas Antisépticas;176
+ITEM-0326;Toallas Antisépticas;175
+ITEM-0327;Cubre Zapatos;174
+ITEM-0328;Bata Desechable;173
+ITEM-0329;Tijeras Médicas;172
+ITEM-0330;Desinfectante 500ml;171
+ITEM-0331;Termómetro Digital;170
+ITEM-0332;Apositos Estériles;169
+ITEM-0333;Algodón 200g;168
+ITEM-0334;Toallas Antisépticas;167
+ITEM-0335;Tijeras Médicas;166
+ITEM-0336;Suero Fisiológico 1L;165
+ITEM-0337;Gasas 10x10;164
+ITEM-0338;Bata Desechable;163
+ITEM-0339;Esparadrapo 5m;162
+ITEM-0340;Gel Antibacterial 250ml;161
+ITEM-0341;Mascarilla KN95;160
+ITEM-0342;Cubre Zapatos;159
+ITEM-0343;Alcohol 70% 1L;158
+ITEM-0344;Toallas Antisépticas;157
+ITEM-0345;Guante Nitrilo Talla M;156
+ITEM-0346;Termómetro Digital;155
+ITEM-0347;Desinfectante 500ml;154
+ITEM-0348;Cinta Microporo;153
+ITEM-0349;Algodón 200g;152
+ITEM-0350;Cinta Microporo;151
+ITEM-0351;Venda Elástica 5cm;150
+ITEM-0352;Cubre Zapatos;149
+ITEM-0353;Guante Nitrilo Talla M;148
+ITEM-0354;Gasas 10x10;147
+ITEM-0355;Toallas Antisépticas;146
+ITEM-0356;Mascarilla KN95;145
+ITEM-0357;Jeringa 5ml;144
+ITEM-0358;Desinfectante 500ml;143
+ITEM-0359;Toallas Antisépticas;142
+ITEM-0360;Guante Nitrilo Talla M;141
+ITEM-0361;Tubo de Ensayo;140
+ITEM-0362;Alcohol 70% 1L;139
+ITEM-0363;Gel Antibacterial 250ml;138
+ITEM-0364;Alcohol 70% 1L;137
+ITEM-0365;Cinta Microporo;136
+ITEM-0366;Desinfectante 500ml;135
+ITEM-0367;Termómetro Digital;134
+ITEM-0368;Apositos Estériles;133
+ITEM-0369;Jeringa 5ml;132
+ITEM-0370;Suero Fisiológico 1L;131
+ITEM-0371;Gasas 10x10;130
+ITEM-0372;Cinta Microporo;129
+ITEM-0373;Cinta Microporo;128
+ITEM-0374;Jeringa 5ml;127
+ITEM-0375;Gasas 10x10;126
+ITEM-0376;Algodón 200g;125
+ITEM-0377;Cinta Microporo;124
+ITEM-0378;Jeringa 5ml;123
+ITEM-0379;Tubo de Ensayo;122
+ITEM-0380;Alcohol 70% 1L;121
+ITEM-0381;Cinta Microporo;120
+ITEM-0382;Guantes Latex Talla L;119
+ITEM-0383;Suero Fisiológico 1L;118
+ITEM-0384;Termómetro Digital;117
+ITEM-0385;Tubo de Ensayo;116
+ITEM-0386;Toallas Antisépticas;115
+ITEM-0387;Cubre Zapatos;114
+ITEM-0388;Desinfectante 500ml;113
+ITEM-0389;Cinta Microporo;112
+ITEM-0390;Guante Nitrilo Talla M;111
+ITEM-0391;Bata Desechable;110
+ITEM-0392;Cubre Zapatos;109
+ITEM-0393;Algodón 200g;108
+ITEM-0394;Venda Elástica 5cm;107
+ITEM-0395;Gel Antibacterial 250ml;106
+ITEM-0396;Bata Desechable;105
+ITEM-0397;Suero Fisiológico 1L;104
+ITEM-0398;Alcohol 70% 1L;103
+ITEM-0399;Guantes Latex Talla L;102
+ITEM-0400;Gasas 10x10;101
+ITEM-0401;Guante Nitrilo Talla M;100
+ITEM-0402;Tijeras Médicas;99
+ITEM-0403;Cubre Zapatos;98
+ITEM-0404;Suero Fisiológico 1L;97
+ITEM-0405;Suero Fisiológico 1L;96
+ITEM-0406;Apositos Estériles;95
+ITEM-0407;Suero Fisiológico 1L;94
+ITEM-0408;Algodón 200g;93
+ITEM-0409;Bata Desechable;92
+ITEM-0410;Guantes Latex Talla L;91
+ITEM-0411;Termómetro Digital;90
+ITEM-0412;Suero Fisiológico 1L;89
+ITEM-0413;Bata Desechable;88
+ITEM-0414;Tubo de Ensayo;87
+ITEM-0415;Apositos Estériles;86
+ITEM-0416;Tubo de Ensayo;85
+ITEM-0417;Algodón 200g;84
+ITEM-0418;Suero Fisiológico 1L;83
+ITEM-0419;Apositos Estériles;82
+ITEM-0420;Bata Desechable;81
+ITEM-0421;Apositos Estériles;80
+ITEM-0422;Termómetro Digital;79
+ITEM-0423;Tijeras Médicas;78
+ITEM-0424;Suero Fisiológico 1L;77
+ITEM-0425;Desinfectante 500ml;76
+ITEM-0426;Esparadrapo 5m;75
+ITEM-0427;Esparadrapo 5m;74
+ITEM-0428;Alcohol 70% 1L;73
+ITEM-0429;Mascarilla KN95;72
+ITEM-0430;Guante Nitrilo Talla M;71
+ITEM-0431;Apositos Estériles;70
+ITEM-0432;Gel Antibacterial 250ml;69
+ITEM-0433;Tijeras Médicas;68
+ITEM-0434;Jeringa 5ml;67
+ITEM-0435;Apositos Estériles;66
+ITEM-0436;Gel Antibacterial 250ml;65
+ITEM-0437;Cinta Microporo;64
+ITEM-0438;Alcohol 70% 1L;63
+ITEM-0439;Alcohol 70% 1L;62
+ITEM-0440;Gasas 10x10;61
+ITEM-0441;Guantes Latex Talla L;60
+ITEM-0442;Gel Antibacterial 250ml;59
+ITEM-0443;Guante Nitrilo Talla M;58
+ITEM-0444;Gel Antibacterial 250ml;57
+ITEM-0445;Cubre Zapatos;56
+ITEM-0446;Algodón 200g;55
+ITEM-0447;Mascarilla KN95;54
+ITEM-0448;Alcohol 70% 1L;53
+ITEM-0449;Gel Antibacterial 250ml;52
+ITEM-0450;Jeringa 5ml;51
+ITEM-0451;Alcohol 70% 1L;50
+ITEM-0452;Algodón 200g;49
+ITEM-0453;Esparadrapo 5m;48
+ITEM-0454;Esparadrapo 5m;47
+ITEM-0455;Suero Fisiológico 1L;46
+ITEM-0456;Cubre Zapatos;45
+ITEM-0457;Venda Elástica 5cm;44
+ITEM-0458;Apositos Estériles;43
+ITEM-0459;Esparadrapo 5m;42
+ITEM-0460;Desinfectante 500ml;41
+ITEM-0461;Mascarilla KN95;40
+ITEM-0462;Cubre Zapatos;39
+ITEM-0463;Cubre Zapatos;38
+ITEM-0464;Toallas Antisépticas;37
+ITEM-0465;Desinfectante 500ml;36
+ITEM-0466;Apositos Estériles;35
+ITEM-0467;Guante Nitrilo Talla M;34
+ITEM-0468;Jeringa 5ml;33
+ITEM-0469;Jeringa 5ml;32
+ITEM-0470;Desinfectante 500ml;31
+ITEM-0471;Cubre Zapatos;30
+ITEM-0472;Gel Antibacterial 250ml;29
+ITEM-0473;Jeringa 5ml;28
+ITEM-0474;Suero Fisiológico 1L;27
+ITEM-0475;Guantes Latex Talla L;26
+ITEM-0476;Algodón 200g;25
+ITEM-0477;Desinfectante 500ml;24
+ITEM-0478;Apositos Estériles;23
+ITEM-0479;Toallas Antisépticas;22
+ITEM-0480;Alcohol 70% 1L;21
+ITEM-0481;Guantes Latex Talla L;20
+ITEM-0482;Algodón 200g;19
+ITEM-0483;Apositos Estériles;18
+ITEM-0484;Mascarilla KN95;17
+ITEM-0485;Bata Desechable;16
+ITEM-0486;Alcohol 70% 1L;15
+ITEM-0487;Apositos Estériles;14
+ITEM-0488;Mascarilla KN95;13
+ITEM-0489;Toallas Antisépticas;12
+ITEM-0490;Venda Elástica 5cm;11
+ITEM-0491;Bata Desechable;10
+ITEM-0492;Toallas Antisépticas;9
+ITEM-0493;Tijeras Médicas;8
+ITEM-0494;Venda Elástica 5cm;7
+ITEM-0495;Guantes Latex Talla L;6
+ITEM-0496;Guantes Latex Talla L;5
+ITEM-0497;Gel Antibacterial 250ml;4
+ITEM-0498;Tubo de Ensayo;3
+ITEM-0499;Mascarilla KN95;2
+ITEM-0500;Apositos Estériles;1

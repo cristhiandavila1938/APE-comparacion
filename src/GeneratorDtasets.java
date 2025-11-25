@@ -11,11 +11,15 @@ public class GeneratorDtasets {
     static DateTimeFormatter FMT = DateTimeFormatter.ofPattern("yyyy-MM-dd'T'HH:mm");
 
     public static void main(String[] args) throws Exception {
+        generarCitas100Ordenadas();
         generarCitasCasiOrdenadas();
         generarPacientes500();
+        generarInventario500Inverso();
         System.out.println("Archivos generados correctamente:");
+        System.out.println(" - citas_100_ordenadas");
         System.out.println(" - citas_100_casi_ordenadas.csv");
         System.out.println(" - pacientes_500.csv");
+        System.out.println(" - inventario_500_inverso.csv");
     }
 
     private static String generarFechaCitaConHorario(Random rnd) {
@@ -27,6 +31,50 @@ public class GeneratorDtasets {
         int minuto = rnd.nextInt(60);
         return String.format("2025-03-%02dT%02d:%02d", dia, hora, minuto);
     }
+
+    // 1. Generar citas_100_ordenadas
+    private static void generarCitas100Ordenadas() throws Exception {
+
+        String[] apellidos = {
+                "Guerrero","Naranjo","Cedeño","Ramírez","Vera","Mora","Sánchez","Bravo","Cruz",
+                "Mendoza","Suárez","Muñoz","Jiménez","Vega","Reyes","Paredes","Castillo","Alvarez",
+                "Flores","Ortega","Rivas","Rojas","Cardenas","Carrillo","Andrade","Paz","Romero",
+                "Figueroa","Torres","Silva"
+        };
+
+        Random rnd = new Random(42);
+
+        // Rango de fechas
+        LocalDateTime inicio = LocalDateTime.of(2025,3,1,8,0);
+
+        try (PrintWriter pw = new PrintWriter(
+                new OutputStreamWriter(
+                        new FileOutputStream("data/citas_100_ordenadas.csv"),
+                        StandardCharsets.UTF_8))) {
+
+            pw.println("id;apellido;fechaHora");
+
+            LocalDateTime actual = inicio;
+
+            for (int i = 1; i <= 100; i++) {
+
+                String id = String.format("CITA-%03d", i);
+                String apellido = apellidos[rnd.nextInt(apellidos.length)];
+
+                // Sumamos entre 1 y 30 minutos para mantener orden
+                int minutos = 1 + rnd.nextInt(30);
+                actual = actual.plusMinutes(minutos);
+
+                pw.printf("%s;%s;%s%n",
+                        id,
+                        apellido,
+                        actual.format(FMT)
+                );
+            }
+        }
+    }
+
+
 
     // 2. Generar citas_100_casi_ordenadas.csv
     private static void generarCitasCasiOrdenadas() throws Exception {
@@ -131,4 +179,49 @@ public class GeneratorDtasets {
             }
         }
     }
+
+    // 4. Generar inventario_500_inverso.csv
+    private static void generarInventario500Inverso() throws Exception {
+
+        String[] insumos = {
+                "Guante Nitrilo Talla M",
+                "Alcohol 70% 1L",
+                "Gasas 10x10",
+                "Venda Elástica 5cm",
+                "Mascarilla KN95",
+                "Jeringa 5ml",
+                "Desinfectante 500ml",
+                "Algodón 200g",
+                "Suero Fisiológico 1L",
+                "Termómetro Digital",
+                "Guantes Latex Talla L",
+                "Tijeras Médicas",
+                "Cinta Microporo",
+                "Bata Desechable",
+                "Apositos Estériles",
+                "Tubo de Ensayo",
+                "Toallas Antisépticas",
+                "Cubre Zapatos",
+                "Gel Antibacterial 250ml",
+                "Esparadrapo 5m"
+        };
+
+        try (PrintWriter pw = new PrintWriter(
+                new OutputStreamWriter(
+                        new FileOutputStream("data/inventario_500_inverso.csv"),
+                        StandardCharsets.UTF_8))) {
+
+            pw.println("id;insumo;stock");
+
+            for (int i = 1; i <= 500; i++) {
+                String id = String.format("ITEM-%04d", i);
+                String insumo = insumos[rnd.nextInt(insumos.length)];
+
+                int stock = 501 - i;  // 500, 499, 498, ..., 1
+
+                pw.println(id + ";" + insumo + ";" + stock);
+            }
+        }
+    }
+
 }

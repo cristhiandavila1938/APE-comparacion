@@ -16,15 +16,39 @@ public class CsvLoader {
     public static Object loadDataset(String filename) throws Exception {
 
         switch (filename) {
+            case "citas_100_ordenadas.csv":
+                return loadCitasOrdenadas("data/" + filename);
             case "citas_100_casi_ordenadas.csv":
                 return loadCitas("data/" + filename);
             case "pacientes_500.csv":
                 return loadPacientes("data/" + filename);
+            case "inventario_500_inverso.csv":
+                return loadInventario("data/" + filename);
+
             default:
                 throw new IllegalArgumentException(
                         "Dataset no manejado por esta parte del proyecto: " + filename);
         }
     }
+    // 1. citas_100_ordenadas
+    private static String[] loadCitasOrdenadas(String path) throws Exception {
+        List<String> lista = new ArrayList<>();
+
+        BufferedReader br = new BufferedReader(
+                new InputStreamReader(new FileInputStream(path), StandardCharsets.UTF_8));
+
+        String line = br.readLine(); // header
+
+        while ((line = br.readLine()) != null) {
+            lista.add(line);
+        }
+
+        br.close();
+        return lista.toArray(new String[0]);
+    }
+
+
+
 
     // 2.citas_100_casi_ordenadas.csv
     //    -> convertir fechaHora a número (minutos)
@@ -71,4 +95,29 @@ public class CsvLoader {
         br.close();
         return lista.toArray(new String[0]);
     }
+
+    // 4. inventario_500_inverso.csv
+    private static int[] loadInventario(String path) throws Exception {
+
+        List<Integer> lista = new ArrayList<>();
+
+        BufferedReader br = new BufferedReader(
+                new InputStreamReader(new FileInputStream(path), StandardCharsets.UTF_8));
+
+        String line = br.readLine(); // header
+
+        while ((line = br.readLine()) != null) {
+            String[] p = line.split(";");
+
+            // columna 2 = stock
+            int stock = Integer.parseInt(p[2].trim());
+
+            lista.add(stock);
+        }
+        br.close();
+
+        return lista.stream().mapToInt(i -> i).toArray();
+    }
+
+
 }
