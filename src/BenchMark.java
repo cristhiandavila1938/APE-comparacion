@@ -20,8 +20,10 @@ public class BenchMark {
         out.println("dataset;algoritmo;n;tipo;comparisons;swaps;mediana_tiempo(ns)");
 
         String[] datasets = {
+                "citas_100_ordenadas.csv",
                 "citas_100_casi_ordenadas.csv",
-                "pacientes_500.csv"
+                "pacientes_500.csv",
+                "inventario_500_inverso.csv"
         };
 
         System.out.println("\n--------RESULTADOS DEL BENCHMARK---------");
@@ -111,9 +113,10 @@ public class BenchMark {
     }
 
     private static String obtenerTipo(String dataset) {
+        if (dataset.contains("ordenadas") && !dataset.contains("casi")) return "ordenado";
         if (dataset.contains("casi_ordenadas")) return "casi-ord";
-        if (dataset.contains("inverso")) return "inverso";
         if (dataset.contains("duplicados") || dataset.contains("pacientes")) return "duplicados";
+        if (dataset.contains("inverso")) return "inverso";
         return "aleatorio"; // por defecto
     }
 
