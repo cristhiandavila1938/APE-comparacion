@@ -51,7 +51,6 @@ public class CsvLoader {
 
 
     // 2.citas_100_casi_ordenadas.csv
-    //    -> convertir fechaHora a número (minutos)
     private static int[] loadCitas(String path) throws Exception {
 
         List<Integer> lista = new ArrayList<>();
@@ -77,7 +76,6 @@ public class CsvLoader {
     }
 
     // 3.pacientes_500.csv
-    //    -> devolver solo los apellidos en un String[]
     private static String[] loadPacientes(String path) throws Exception {
 
         List<String> lista = new ArrayList<>();

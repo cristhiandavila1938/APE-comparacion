@@ -8,7 +8,8 @@ import java.util.Arrays;
 public class GeneratorDtasets {
 
     static Random rnd = new Random(42);
-    static DateTimeFormatter FMT = DateTimeFormatter.ofPattern("yyyy-MM-dd'T'HH:mm");
+    //static DateTimeFormatter FMT = DateTimeFormatter.ofPattern("yyyy-MM-dd'T'HH:mm");
+    private static final DateTimeFormatter FMT = DateTimeFormatter.ofPattern("yyyy-MM-dd'T'HH:mm");
 
     public static void main(String[] args) throws Exception {
         generarCitas100Ordenadas();
@@ -20,16 +21,6 @@ public class GeneratorDtasets {
         System.out.println(" - citas_100_casi_ordenadas.csv");
         System.out.println(" - pacientes_500.csv");
         System.out.println(" - inventario_500_inverso.csv");
-    }
-
-    private static String generarFechaCitaConHorario(Random rnd) {
-        // Día entre 1 y 31
-        int dia = 1 + rnd.nextInt(31);
-        // Hora entre 08 y 18
-        int hora = 8 + rnd.nextInt(11);
-        // Minuto entre 0 y 59
-        int minuto = rnd.nextInt(60);
-        return String.format("2025-03-%02dT%02d:%02d", dia, hora, minuto);
     }
 
     // 1. Generar citas_100_ordenadas
@@ -74,7 +65,12 @@ public class GeneratorDtasets {
         }
     }
 
-
+    private static String generarFechaCitaConHorario(Random rnd) {
+        int dia = 1 + rnd.nextInt(31);          // 1–31
+        int hora = 8 + rnd.nextInt(11);         // 8–18
+        int minuto = rnd.nextInt(60);           // 00–59
+        return String.format("2025-03-%02dT%02d:%02d", dia, hora, minuto);
+    }
 
     // 2. Generar citas_100_casi_ordenadas.csv
     private static void generarCitasCasiOrdenadas() throws Exception {
@@ -86,27 +82,33 @@ public class GeneratorDtasets {
                 "Figueroa","Torres","Silva"
         };
 
-        LocalDateTime inicio = LocalDateTime.of(2025,3,1,8,0);
-        LocalDateTime fin    = LocalDateTime.of(2025,3,31,18,0);
+        DateTimeFormatter FMT = DateTimeFormatter.ofPattern("yyyy-MM-dd'T'HH:mm");
 
-        long minutosTot = Duration.between(inicio, fin).toMinutes();
-
-        // Generar citas base (100)
         List<String[]> citas = new ArrayList<>();
+        LocalDateTime fecha = LocalDateTime.of(2025, 3, 1, 8, 0);
+
+        // Generar 100 fechas en secuencia
+        Random rnd = new Random(42);
 
         for (int i = 1; i <= 100; i++) {
+
+            // generar fecha ascendente real
+            int minutos = 30 + rnd.nextInt(90);
+            fecha = fecha.plusMinutes(minutos);
+
+            // Si pasa de las 18:00 → saltar al siguiente día a las 8:00
+            if (fecha.getHour() > 18) {
+                fecha = fecha.withHour(8).withMinute(rnd.nextInt(60)).plusDays(1);
+            }
+
             citas.add(new String[]{
                     String.format("CITA-%03d", i),
                     apellidos[rnd.nextInt(apellidos.length)],
-                    generarFechaCitaConHorario(rnd)
+                    fecha.format(FMT)
             });
-
         }
 
-        // Ordenar por fechaHora asc
-        citas.sort(Comparator.comparing(c -> c[2]));
-
-        // Hacer exactamente 5 swaps
+        // Aplicar 5 swaps
         rnd = new Random(42);
         HashSet<String> usados = new HashSet<>();
 
@@ -114,6 +116,7 @@ public class GeneratorDtasets {
             while (true) {
                 int a = rnd.nextInt(100);
                 int b = rnd.nextInt(100);
+
                 if (a != b) {
                     String p1 = a + "-" + b;
                     String p2 = b + "-" + a;
@@ -152,30 +155,43 @@ public class GeneratorDtasets {
                 "Vargas","Cordova","Valencia","Aguilar","Rosales","Lozano","Calle","Villalba",
                 "Cando","Soria","Salazar","Herrera","Pazmino","Benavides","Espinosa","Galvez", "Corozo"
         );
-        System.out.println("Total apellidos = " + apes.size());
 
         List<String> g1 = apes.subList(0, 15);   // 60%
         List<String> g2 = apes.subList(15, 30);  // 30%
         List<String> g3 = apes.subList(30, 50);  // 10%
 
+        // Aquí guardamos todas las filas antes de ordenar
+        List<String[]> pacientes = new ArrayList<>();
+
+        for (int i = 1; i <= 500; i++) {
+            double r = rnd.nextDouble();
+            String apellido;
+
+            if (r < 0.6) apellido = g1.get(rnd.nextInt(g1.size()));
+            else if (r < 0.9) apellido = g2.get(rnd.nextInt(g2.size()));
+            else apellido = g3.get(rnd.nextInt(g3.size()));
+
+            int prioridad = rnd.nextInt(3) + 1;
+
+            pacientes.add(new String[]{
+                    String.format("PAC-%04d", i),
+                    apellido,
+                    String.valueOf(prioridad)
+            });
+        }
+
+        // ORDENAR por apellido (A–Z)
+        pacientes.sort(Comparator.comparing(p -> p[1]));
+
+        // Guardar en CSV
         try (PrintWriter pw = new PrintWriter(
                 new OutputStreamWriter(
                         new FileOutputStream("data/pacientes_500.csv"),
                         StandardCharsets.UTF_8))) {
 
             pw.println("id;apellido;prioridad");
-
-            for (int i = 1; i <= 500; i++) {
-                double r = rnd.nextDouble();
-                String apellido;
-
-                if (r < 0.6) apellido = g1.get(rnd.nextInt(g1.size()));
-                else if (r < 0.9) apellido = g2.get(rnd.nextInt(g2.size()));
-                else apellido = g3.get(rnd.nextInt(g3.size()));
-
-                int prioridad = rnd.nextInt(3) + 1;
-
-                pw.printf("PAC-%04d;%s;%d%n", i, apellido, prioridad);
+            for (String[] p : pacientes) {
+                pw.println(String.join(";", p));
             }
         }
     }
