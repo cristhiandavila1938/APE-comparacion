@@ -17,7 +17,7 @@ public class BenchMark {
         );
 
         // Encabezado de csv
-        out.println("dataset;algoritmo;n;comparisons;swaps;mediana_tiempo(ns)");
+        out.println("dataset;algoritmo;n;tipo;comparisons;swaps;mediana_tiempo(ns)");
 
         String[] datasets = {
                 "citas_100_casi_ordenadas.csv",
@@ -29,9 +29,10 @@ public class BenchMark {
         for (String dataset : datasets) {
             System.out.println("\nDataset: " + dataset);
             System.out.println(
-                    String.format("%-15s %-12s %-12s %-12s %-20s",
-                            "Algoritmo", "N", "Comparaciones", "Swaps", "Tiempo(ns)")
+                    String.format("%-15s %-8s %-12s %-12s %-12s %-20s",
+                            "Algoritmo", "N", "Tipo", "Compar.", "Swaps", "Tiempo(ns)")
             );
+
             System.out.println("-----------------------------------------------------------------------");
 
             Object loaded = CsvLoader.loadDataset(dataset);
@@ -78,19 +79,24 @@ public class BenchMark {
                         ((int[]) loaded).length :
                         ((String[]) loaded).length;
 
+                String tipo = obtenerTipo(dataset);
+
                 System.out.println(String.format(
-                        "%-15s %-12d %-12d %-12d %-20d",
+                        "%-15s %-8d %-12s %-12d %-12d %-20d",
                         formatearAlgoritmo(alg),
                         n,
+                        tipo,
                         medianaComp,
                         medianaSwaps,
                         medianaTiempo
                 ));
+
                 // Guardar en archivo CSV
                 out.println(
                         dataset + ";" +
                                 alg + ";" +
                                 n + ";" +
+                                obtenerTipo(dataset) + ";" +
                                 medianaComp + ";" +
                                 medianaSwaps + ";" +
                                 medianaTiempo
@@ -103,6 +109,14 @@ public class BenchMark {
         System.out.println("Benchmark finalizado.");
 
     }
+
+    private static String obtenerTipo(String dataset) {
+        if (dataset.contains("casi_ordenadas")) return "casi-ord";
+        if (dataset.contains("inverso")) return "inverso";
+        if (dataset.contains("duplicados") || dataset.contains("pacientes")) return "duplicados";
+        return "aleatorio"; // por defecto
+    }
+
 
     private static String formatearAlgoritmo(String s) {
         switch(s) {
