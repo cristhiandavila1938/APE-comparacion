@@ -1,5 +1,9 @@
 # Práctica de Ordenación Básica en Java: Burbuja, Selección e Inserción
 
+## Cómo descargar el repositorio
+Link del informe de la practica:
+https://drive.google.com/file/d/14PBLb8aFSyb8vvbm6dASnb3l2Pizg6cQ/view?usp=sharing
+
 ## Datos de Identificación
 **Estudiantes:** Bryan Gustavo Troya Velez, Cristhian Alexander Dávila Sari  
 **Asignatura:** Estructura de Datos  
