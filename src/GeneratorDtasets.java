@@ -160,38 +160,24 @@ public class GeneratorDtasets {
         List<String> g2 = apes.subList(15, 30);  // 30%
         List<String> g3 = apes.subList(30, 50);  // 10%
 
-        // Aquí guardamos todas las filas antes de ordenar
-        List<String[]> pacientes = new ArrayList<>();
-
-        for (int i = 1; i <= 500; i++) {
-            double r = rnd.nextDouble();
-            String apellido;
-
-            if (r < 0.6) apellido = g1.get(rnd.nextInt(g1.size()));
-            else if (r < 0.9) apellido = g2.get(rnd.nextInt(g2.size()));
-            else apellido = g3.get(rnd.nextInt(g3.size()));
-
-            int prioridad = rnd.nextInt(3) + 1;
-
-            pacientes.add(new String[]{
-                    String.format("PAC-%04d", i),
-                    apellido,
-                    String.valueOf(prioridad)
-            });
-        }
-
-        // ORDENAR por apellido (A–Z)
-        pacientes.sort(Comparator.comparing(p -> p[1]));
-
-        // Guardar en CSV
         try (PrintWriter pw = new PrintWriter(
                 new OutputStreamWriter(
                         new FileOutputStream("data/pacientes_500.csv"),
                         StandardCharsets.UTF_8))) {
 
             pw.println("id;apellido;prioridad");
-            for (String[] p : pacientes) {
-                pw.println(String.join(";", p));
+
+            for (int i = 1; i <= 500; i++) {
+                double r = rnd.nextDouble();
+                String apellido;
+
+                if (r < 0.6) apellido = g1.get(rnd.nextInt(g1.size()));
+                else if (r < 0.9) apellido = g2.get(rnd.nextInt(g2.size()));
+                else apellido = g3.get(rnd.nextInt(g3.size()));
+
+                int prioridad = rnd.nextInt(3) + 1;
+
+                pw.printf("PAC-%04d;%s;%d%n", i, apellido, prioridad);
             }
         }
     }
@@ -239,5 +225,4 @@ public class GeneratorDtasets {
             }
         }
     }
-
 }
