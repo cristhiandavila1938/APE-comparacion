@@ -1,7 +1,7 @@
-dataset;algoritmo;n;comparisons;swaps;mediana_tiempo(ns)
-citas_100_casi_ordenadas.csv;insertion;100;492;393;15300
-citas_100_casi_ordenadas.csv;selection;100;4950;5;102700
-citas_100_casi_ordenadas.csv;bubble;100;4650;393;136400
-pacientes_500.csv;insertion;500;57995;57496;386200
-pacientes_500.csv;selection;500;124750;486;802900
-pacientes_500.csv;bubble;500;124425;57496;867100
+dataset;algoritmo;n;tipo;comparisons;swaps;mediana_tiempo(ns)
+citas_100_casi_ordenadas.csv;insertion;100;casi-ord;492;393;16700
+citas_100_casi_ordenadas.csv;selection;100;casi-ord;4950;5;128400
+citas_100_casi_ordenadas.csv;bubble;100;casi-ord;4650;393;136800
+pacientes_500.csv;insertion;500;duplicados;57995;57496;385400
+pacientes_500.csv;selection;500;duplicados;124750;486;739700
+pacientes_500.csv;bubble;500;duplicados;124425;57496;919200
