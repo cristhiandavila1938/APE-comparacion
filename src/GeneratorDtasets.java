@@ -44,9 +44,8 @@ public class GeneratorDtasets {
 
         Random rnd = new Random(42);
 
+        // Rango de fechas
         LocalDateTime inicio = LocalDateTime.of(2025,3,1,8,0);
-        LocalDateTime fin    = LocalDateTime.of(2025,3,31,18,0);
-        long minutosTot = Duration.between(inicio, fin).toMinutes();
 
         try (PrintWriter pw = new PrintWriter(
                 new OutputStreamWriter(
@@ -55,20 +54,26 @@ public class GeneratorDtasets {
 
             pw.println("id;apellido;fechaHora");
 
+            LocalDateTime actual = inicio;
+
             for (int i = 1; i <= 100; i++) {
 
                 String id = String.format("CITA-%03d", i);
                 String apellido = apellidos[rnd.nextInt(apellidos.length)];
 
-                long offset = rnd.nextInt((int) minutosTot);
-                LocalDateTime fecha = inicio.plusMinutes(offset);
+                // Sumamos entre 1 y 30 minutos para mantener orden
+                int minutos = 1 + rnd.nextInt(30);
+                actual = actual.plusMinutes(minutos);
 
-                String fechaStr = fecha.format(DateTimeFormatter.ofPattern("yyyy-MM-dd'T'HH:mm"));
-
-                pw.println(id + ";" + apellido + ";" + fechaStr);
+                pw.printf("%s;%s;%s%n",
+                        id,
+                        apellido,
+                        actual.format(FMT)
+                );
             }
         }
     }
+
 
 
     // 2. Generar citas_100_casi_ordenadas.csv
